@@ -11,7 +11,7 @@ from matplotlib import pyplot as plt
 
 from data import make_dataset1, make_dataset2
 from plot import plot_boundary
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier, plot_tree
 
 def test_depth(depth, n_samples, n_fit):
   n_tests = 5
@@ -50,6 +50,9 @@ if __name__ == "__main__":
     dt = DecisionTreeClassifier(max_depth=depth)
     fitted = dt.fit(X=data_points[:fit_size+1], y=data_colors[:fit_size+1])
     f_name = "figs/dt/dt_" + str(depth)
+    tree_name = "figs/dt/tree_" + str(depth) + ".svg"
     f_title = "Decision tree with max_depth = " + str(depth)
     plot_boundary(f_name, fitted, data_points, data_colors, title=f_title)
+    plot_tree(fitted, filled=True, feature_names=["x1", "x2"], class_names=["red", "blue"], rounded=True)
+    plt.savefig(tree_name)
     test_depth(depth, sample_size, fit_size)
