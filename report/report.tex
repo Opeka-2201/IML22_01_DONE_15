@@ -188,12 +188,11 @@ Quadratic case :
 \begin{align}
 	\log\frac{\pi_0}{\pi_1} - \frac{1}{2}(\mu_0+\mu_1)^T\Sigma^{-1}(\mu_0-\mu_1) + x^T\Sigma^{-1}(\mu_0-\mu_1) + \log\frac{|\Sigma_1|}{|\Sigma_0|} = 0
 \end{align}
-\subsection{}
-\subsubsection[]{Quadratic/Linear discriminant analysis}
+\subsection[]{Quadratic/Linear discriminant analysis}
 As we can see, LDA is a special case of QDA where $\Sigma_0=\Sigma_1=\Sigma$. This is why the decision boundary is linear in LDA and quadratic in QDA.
 It is also the reason why the curve of iso probbility is parallel line in LDA. We can also see that QDA is much more confident in general than LDA.
 
-\begin{figure}[htp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=.4\textwidth]{img/lda2.pdf}\quad
 	\includegraphics[width=.4\textwidth]{img/qda2.pdf}\quad
@@ -201,7 +200,7 @@ It is also the reason why the curve of iso probbility is parallel line in LDA. W
 	\caption{Quadratic/Linear discriminant analysis}
 	\label{fig:qdalda}
 \end{figure}
-\subsubsection{Tests accuracy report}
+\subsection{Tests accuracy report}
 	\begin{table}[!h]
 		\centering
 		\begin{tabular}{|c|c|c|}

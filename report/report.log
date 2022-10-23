@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.10)  23 OCT 2022 21:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.10)  23 OCT 2022 21:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -467,18 +467,14 @@ pdfTeX warning: pdflatex.exe (file ./img/knn_1200.pdf): PDF inclusion: multiple 
 <img/lda2.pdf, id=411, 462.52798pt x 346.89601pt>
 File: img/lda2.pdf Graphic file (type pdf)
 <use img/lda2.pdf>
-Package pdftex.def Info: img/lda2.pdf  used on input line 198.
+Package pdftex.def Info: img/lda2.pdf  used on input line 197.
 (pdftex.def)             Requested size: 188.8096pt x 141.60898pt.
 <img/qda2.pdf, id=412, 462.52798pt x 346.89601pt>
 File: img/qda2.pdf Graphic file (type pdf)
 <use img/qda2.pdf>
-Package pdftex.def Info: img/qda2.pdf  used on input line 199.
+Package pdftex.def Info: img/qda2.pdf  used on input line 198.
 (pdftex.def)             Requested size: 188.8096pt x 141.60898pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4]
+ [4]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -487,18 +483,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 pdfTeX warning: pdflatex.exe (file ./img/qda2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] [6] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 9588 strings out of 478300
- 155483 string characters out of 5849123
- 477648 words of memory out of 5000000
- 27615 multiletter control sequences out of 15000+600000
- 483104 words of font info for 59 fonts, out of 8000000 for 9000
+ 9586 strings out of 478300
+ 155461 string characters out of 5849123
+ 475648 words of memory out of 5000000
+ 27614 multiletter control sequences out of 15000+600000
+ 482328 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,9n,67p,598b,600s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on report.pdf (7 pages, 930822 bytes).
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on report.pdf (7 pages, 914014 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
+ 564 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
