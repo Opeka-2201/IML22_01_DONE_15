@@ -125,7 +125,7 @@
 		\centering
 		\begin{tabular}{|c|c|c|}
 		\hline
-		\verb|n_neighbors| & Mean & Standard Deviation \\ \hline
+		\verb|n_neighbord| & Mean & Standard Deviation \\ \hline
 		1                                & 0.78 & 0.024              \\ \hline
 		5                                & 0.81 & 0.013              \\ \hline
 		25                                & 0.84 & 0.013              \\ \hline
@@ -176,40 +176,19 @@ Dividing both sides by $P(y=1|x)$ and taking the logarithm, we get the following
 	-\frac{1}{2}(\mu_0+\mu_1)^T\Sigma^{-1}(\mu_0-\mu_1) + x^T\Sigma^{-1}(\mu_0+\mu_1)+  \log\frac{\pi_0}{\pi_1} &= 0
 \end{align}
 \subsection{}
-\subsubsection[]{Quadratic/Linear discriminant analysis}
-As we can see, LDA is a special case of QDA where $\Sigma_0=\Sigma_1=\Sigma$. This is why the decision boundary is linear in LDA and quadratic in QDA.
-It is also the reason why the curve of iso probbility is parallel line in LDA. We can also see that QDA is much more confident in general than LDA.
-
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=.4\textwidth]{img/lda2.pdf}\quad
-	\includegraphics[width=.4\textwidth]{img/qda2.pdf}\quad
+	\includegraphics[width=.4\textwidth]{img/knn_1.pdf}\quad
+	\includegraphics[width=.4\textwidth]{img/knn_5.pdf}\quad
 	
-	\caption{Quadratic/Linear discriminant analysis}
-	\label{fig:qdalda}
+	\medskip
+	
+	\includegraphics[width=.4\textwidth]{img/knn_125.pdf}\quad
+	\includegraphics[width=.4\textwidth]{img/knn_625.pdf}\quad
+	
+	\caption{K-nearest neighbors with different n\_neighbors values}
+	\label{fig:knn}
 \end{figure}
-\subsubsection[]{Tests accuracy report}
-	\begin{table}[!h]
-		\centering
-		\begin{tabular}{|c|c|c|}
-		\hline
-		\verb|LDA QDA| & Mean & Standard Deviation \\ \hline
-		LDA1                                & 0.85 & 0.068              \\ \hline
-		QDA1                                & 0.86 & 0.057              \\ \hline
-		LDA2                                & 0.72 & 0.053              \\ \hline
-		QDA2                                & 0.76 & 0.062              \\ \hline
-
-
-		\end{tabular}
-		\caption{Decision trees results}
-		\label{tab:results-qdalda}
-	\end{table}
-We can see that QDA is better than LDA in general. But the results are really close for dataset 1 because this dataset is create thanks to a circular gaussian distribution. 
-So the matrix of covariance is diagonal and the decision boundary is linear.
 \section{Comparison}
-\subsection[]{Tune hyperparameters}
-To find the best hyperparameters, we tried different values for the hyperparameters and we kept the best ones.
-The best hyperparameters are the ones that give the best accuracy while keeping the standard deviation low and have a good time of execution so the lower depth in decision trees and the less neighbors in KNN.
-To sum up, to find the best hyperparameters, we look at 3 criterias : accuracy, standard deviation and time of execution.
 
 \end{document}

@@ -7,52 +7,42 @@ Project 1 - Classification algorithms
 # -*- coding: utf-8 -*-
 
 import numpy as np
-from matplotlib import pyplot as plt
 
-from data import make_dataset1, make_dataset2
+from data import make_dataset2
 from plot import plot_boundary
-from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
 
 def test_depth(depth, n_samples, n_fit):
-  n_tests = 5
-  results = np.zeros(5)
+  n = 5
+  acc = np.zeros(n)
 
-  for i in range(n_tests):
-    test = 0.
-    data = make_dataset2(n_samples)
-    data_points = data[0]
-    data_colors = data[1]
+  for i in range(n):
+    X, y = make_dataset2(n_samples)
+    X_fit, y_fit = X[:n_fit], y[:n_fit]
+    X_test, y_test = X[n_fit:], y[n_fit:]
 
     dt = DecisionTreeClassifier(max_depth=depth)
-    dt.fit(X=data_points[:n_fit+1], y=data_colors[:n_fit+1])
-    sample_colors = data_colors[n_fit+1:]
-    predicted_colors = dt.predict(X=data_points[n_fit+1:])
-    
-    for j in range(len(sample_colors)):
-      if sample_colors[j] == predicted_colors[j]:
-        test+=1
+    dt.fit(X_fit, y_fit)
+    y_pred = dt.predict(X_test)
+    acc[i] = accuracy_score(y_test, y_pred)
 
-    results[i] = test/(n_samples-n_fit)
-  
-  print("Results for depth = " + str(depth) + ":")
-  print("Mean : " + str(results.mean()))
-  print("Std : " + str(results.std()) + "\n")
+  print("Accuracy for depth {} : {}" .format(depth, np.mean(acc)))
+  print("Standard deviation for depth {} : {}" .format(depth, np.std(acc)))
 
 if __name__ == "__main__":
   depths = [1,2,4,8,None]
   sample_size = 1500
   fit_size = 1200
-  data = make_dataset2(n_points=sample_size)
-  data_points = data[0]
-  data_colors = data[1]
+
+  X, y = make_dataset2(sample_size)
 
   for depth in depths:
-    dt = DecisionTreeClassifier(max_depth=depth)
-    fitted = dt.fit(X=data_points[:fit_size+1], y=data_colors[:fit_size+1])
-    f_name = "figs/dt/dt_" + str(depth)
-    tree_name = "figs/dt/tree_" + str(depth) + ".svg"
-    f_title = "Decision tree with max_depth = " + str(depth)
-    plot_boundary(f_name, fitted, data_points, data_colors, title=f_title)
-    plot_tree(fitted, filled=True, feature_names=["x1", "x2"], class_names=["red", "blue"], rounded=True)
-    plt.savefig(tree_name)
     test_depth(depth, sample_size, fit_size)
+
+    dt = DecisionTreeClassifier(max_depth=depth)
+    dt.fit(X[:fit_size], y[:fit_size])
+    fname = "figs/dt/dt_{}" .format(depth)
+    plot_boundary(fname, dt, X, y, title="Decision Tree with depth {}" .format(depth))
+
+  

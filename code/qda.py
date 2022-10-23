@@ -9,6 +9,7 @@ Project 1 - Classification algorithms
 import numpy as np
 
 from sklearn.base import BaseEstimator, ClassifierMixin
+from sklearn.metrics import accuracy_score
 from data import make_dataset1, make_dataset2
 from plot import plot_boundary
 
@@ -137,7 +138,6 @@ class QuadraticDiscriminantAnalysis(BaseEstimator, ClassifierMixin):
         """
 
         n_samples = X.shape[0]
-        n_features = X.shape[1]
 
         probabilities = np.zeros(n_samples, dtype=np.float64)
 
@@ -146,40 +146,61 @@ class QuadraticDiscriminantAnalysis(BaseEstimator, ClassifierMixin):
 
         return probabilities
 
+def test_qda(n_samples, n_fit):
+    n_tests = 5
+
+    accuracy_qda1 = np.zeros(n_tests)
+    accuracy_lda1 = np.zeros(n_tests)
+    accuracy_qda2 = np.zeros(n_tests)
+    accuracy_lda2 = np.zeros(n_tests)
+
+    for i in range(n_tests):
+        X1, y1 = make_dataset1(n_samples)
+        X2, y2 = make_dataset2(n_samples)
+
+        qda1 = QuadraticDiscriminantAnalysis()
+        qda1.fit(X1[:n_fit], y1[:n_fit])
+        accuracy_qda1[i] = accuracy_score(y1[n_fit:], qda1.predict(X1[n_fit:]))
+
+        lda1 = QuadraticDiscriminantAnalysis()
+        lda1.fit(X1[:n_fit], y1[:n_fit], lda=True)
+        accuracy_lda1[i] = accuracy_score(y1[n_fit:], lda1.predict(X1[n_fit:]))
+
+        qda2 = QuadraticDiscriminantAnalysis()
+        qda2.fit(X2[:n_fit], y2[:n_fit])
+        accuracy_qda2[i] = accuracy_score(y2[n_fit:], qda2.predict(X2[n_fit:]))
+
+        lda2 = QuadraticDiscriminantAnalysis()
+        lda2.fit(X2[:n_fit], y2[:n_fit], lda=True)
+        accuracy_lda2[i] = accuracy_score(y2[n_fit:], lda2.predict(X2[n_fit:]))
+
+    print("Average accuracy of QDA on dataset 1: %f" % np.mean(accuracy_qda1))
+    print("Average accuracy of LDA on dataset 1: %f" % np.mean(accuracy_lda1))
+    print("Average accuracy of QDA on dataset 2: %f" % np.mean(accuracy_qda2))
+    print("Average accuracy of LDA on dataset 2: %f" % np.mean(accuracy_lda2))
+
+    print("Standard deviation of QDA on dataset 1: %f" % np.std(accuracy_qda1))
+    print("Standard deviation of LDA on dataset 1: %f" % np.std(accuracy_lda1))
+    print("Standard deviation of QDA on dataset 2: %f" % np.std(accuracy_qda2))
+    print("Standard deviation of LDA on dataset 2: %f" % np.std(accuracy_lda2))
+
+
 if __name__ == "__main__":
-    from data import make_dataset1, make_dataset2
-    from plot import plot_boundary
     n_samples = 1500
     n_fit = 1200
-  
-    data_1 = make_dataset2(n_points=1500)
-    X = data_1[0]
-    y = data_1[1]
-    qda_1 = QuadraticDiscriminantAnalysis()
-    lda_1 = QuadraticDiscriminantAnalysis()
-    qda_1.fit(X=X[:n_fit+1], y=y[:n_fit+1], lda=False)
-    lda_1.fit(X=X[:n_fit+1], y=y[:n_fit+1], lda=True)
-    qda_1.predict(X[n_fit+1:])
-    lda_1.predict(X[n_fit+1:])
 
-    qda_1_name="figs/qda/qda1.pdf"
-    lda_1_name="figs/qda/lda1.pdf"
+    X, y = make_dataset2(n_points=1500)
 
-    plot_boundary(qda_1_name, qda_1, X, y, title="QDA")
-    plot_boundary(lda_1_name, lda_1, X, y, title="LDA")
-
-    data_2 = make_dataset2(n_points=1500)
-    X = data_2[0]
-    y = data_2[1]
     qda_2 = QuadraticDiscriminantAnalysis()
     lda_2 = QuadraticDiscriminantAnalysis()
-    qda_2.fit(X=X[:n_fit+1], y=y[:n_fit+1], lda=False)
-    lda_2.fit(X=X[:n_fit+1], y=y[:n_fit+1], lda=True)
-    qda_2.predict(X[n_fit+1:])
-    lda_2.predict(X[n_fit+1:])
+
+    qda_2.fit(X[:n_fit+1], y[:n_fit+1], lda=False)
+    lda_2.fit(X[:n_fit+1], y[:n_fit+1], lda=True)
+
     qda_2_name="figs/qda/qda2"
     lda_2_name="figs/qda/lda2"
 
-    plot_boundary(qda_2_name, qda_2, X, y, title="QDA")
-    plot_boundary(lda_2_name, lda_2, X, y, title="LDA")
+    plot_boundary(qda_2_name, qda_2, X, y, title="QDA on dataset 2")
+    plot_boundary(lda_2_name, lda_2, X, y, title="LDA on dataset 2")
 
+    test_qda(n_samples, n_fit)

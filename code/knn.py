@@ -7,49 +7,40 @@ Project 1 - Classification algorithms
 # -*- coding: utf-8 -*-
 
 import numpy as np
-from matplotlib import pyplot as plt
 
-from data import make_dataset1, make_dataset2
+from data import make_dataset2
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
 from plot import plot_boundary
 
 def test_neighbor(neighbor, n_samples, n_fit):
-  n_tests = 5
-  results = np.zeros(5)
+  n = 5
+  acc = np.zeros(n)
 
-  for i in range(n_tests):
-    test = 0.
-    data = make_dataset2(n_samples)
-    data_points = data[0]
-    data_colors = data[1]
+  for i in range(n):
+    X, y = make_dataset2(n_samples)
+    X_fit, y_fit = X[:n_fit], y[:n_fit]
+    X_test, y_test = X[n_fit:], y[n_fit:]
 
     knn = KNeighborsClassifier(n_neighbors=neighbor)
-    knn.fit(X=data_points[:n_fit+1], y=data_colors[:n_fit+1])
-    sample_colors = data_colors[n_fit+1:]
-    predicted_colors = knn.predict(X=data_points[n_fit+1:])
-    
-    for j in range(len(sample_colors)):
-      if sample_colors[j] == predicted_colors[j]:
-        test+=1
+    knn.fit(X_fit, y_fit)
+    y_pred = knn.predict(X_test)
+    acc[i] = accuracy_score(y_test, y_pred)
 
-    results[i] = test/(n_samples-n_fit)
-  
-  print("Results for n_neighbors = " + str(neighbor) + ":")
-  print("Mean : " + str(results.mean()))
-  print("Std : " + str(results.std()) + "\n")
+  print("Accuracy for {} neighbors: {}" .format(neighbor, np.mean(acc)))
+  print("Standard deviation for {} neighbors: {}" .format(neighbor, np.std(acc)))
 
 if __name__ == "__main__":
   neighbors = [1,5,25,125,625,1200]
   sample_size = 1500
   fit_size = 1200
-  data = make_dataset2(n_points=sample_size)
-  data_points = data[0]
-  data_colors = data[1]
+
+  X, y = make_dataset2(n_points=sample_size)
 
   for neighbor in neighbors:
-    knn = KNeighborsClassifier(n_neighbors=neighbor)
-    fitted = knn.fit(X=data_points[:fit_size+1], y=data_colors[:fit_size+1])
-    f_name = "figs/knn/knn_" + str(neighbor)
-    f_title = "K-nearest neighbor with n_neighbors = " + str(neighbor)
-    plot_boundary(f_name, fitted, data_points, data_colors, title=f_title)
     test_neighbor(neighbor, sample_size, fit_size)
+      
+    knn = KNeighborsClassifier(n_neighbors=neighbor)
+    knn.fit(X[:fit_size], y[:fit_size])
+    fname = "figs/knn/knn_{}" .format(neighbor)
+    plot_boundary(fname, knn, X, y, title="KNN with {} neighbors" .format(neighbor))
