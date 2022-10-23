@@ -69,6 +69,20 @@
 \subsection{Impact of the tree's depth on the decision boundary}
 \begin{enumerate}[a)]
 	\item The lower the depth of the tree, the lower the decision boundary will be. Indeed, when the depth is equal to 1, the boundary is a simple line and as the depth increases, the boundary becomes more complex, fitting the data better. This phenomenon can be seen in the following figure 1.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.3\textwidth]{img/dt_1.pdf}\quad
+		\includegraphics[width=.3\textwidth]{img/dt_2.pdf}\quad
+		\includegraphics[width=.3\textwidth]{img/dt_4.pdf}
+		
+		\medskip
+		
+		\includegraphics[width=.3\textwidth]{img/dt_8.pdf}\quad
+		\includegraphics[width=.3\textwidth]{img/dt_None.pdf}
+		
+		\caption{Decision trees with different depths}
+		\label{fig:dt}
+		\end{figure}
 	\item On one hand, when the depth is 1, the separation between areas is a simple line. 
 	The model is too complex to be fit in this way so the depth 1 is clearly underfitting the problem. 
 	For the depth 2, the model is more complex and fits the data better but it is still underfitting the problem.
@@ -83,7 +97,7 @@
 	We can clearly see that the best depth is 4, as it gives the best accuracy while keeping the standard deviation low.
 	When the depth gets past 4, the model overfits the data leading to decreased accuracy and increased standard deviation (the model is fitting the noise in the data).
 
-	\begin{table}[!h]
+	\begin{table}[H]
 		\centering
 		\begin{tabular}{|c|c|c|}
 		\hline
@@ -98,23 +112,10 @@
 		\label{tab:results-dt}
 		\end{table}
 
-	\newpage
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=.3\textwidth]{img/dt_1.pdf}\quad
-	\includegraphics[width=.3\textwidth]{img/dt_2.pdf}\quad
-	\includegraphics[width=.3\textwidth]{img/dt_4.pdf}
 	
-	\medskip
 	
-	\includegraphics[width=.3\textwidth]{img/dt_8.pdf}\quad
-	\includegraphics[width=.3\textwidth]{img/dt_None.pdf}
-	
-	\caption{Decision trees with different depths}
-	\label{fig:dt}
-	\end{figure}
 
-\newpage
+
 \section{K-nearest neighbors}
 	\subsection{Impact of the number of neighbors on the decision boundary}
 	\begin{enumerate}[a)]
@@ -141,7 +142,10 @@
 		And in the worst case, when the number of neighbors is equal to the number of samples, the model simply makes the same prediction for every sample, which is the mean of the training set, giving the worst accuracy possible.
 	\end{enumerate}
 \subsection{Tests accuracy report}
-	\begin{table}[!h]
+Reporting to the table, we can see that the best number of neighbors is 125. 
+Indeed, it gives good accuracy while keeping the standard deviation low. 
+When the number of neighbors is too low, the model overfits the data and when it is too high, the model underfits the data.
+	\begin{table}[H]
 		\centering
 		\begin{tabular}{|c|c|c|}
 		\hline
@@ -157,9 +161,7 @@
 		\caption{Decision trees results}
 		\label{tab:results-knn}
 	\end{table}
-Reporting to the table, we can see that the best number of neighbors is 125. 
-Indeed, it gives good accuracy while keeping the standard deviation low. 
-When the number of neighbors is too low, the model overfits the data and when it is too high, the model underfits the data.
+
 
 
 \section{Quadratic/Linear discriminant analysis}
@@ -201,6 +203,8 @@ It is also the reason why the curve of iso probbility is parallel line in LDA. W
 	\label{fig:qdalda}
 \end{figure}
 \subsection{Tests accuracy report}
+We can see that QDA is better than LDA in general. But the results are really close for dataset 1 because this dataset is created using circular gaussian distribution. 
+So the covariance matrix is diagonal and the decision boundary is linear.
 	\begin{table}[!h]
 		\centering
 		\begin{tabular}{|c|c|c|}
@@ -215,8 +219,7 @@ It is also the reason why the curve of iso probbility is parallel line in LDA. W
 		\label{tab:results-qdalda}
 	\end{table}
 
-We can see that QDA is better than LDA in general. But the results are really close for dataset 1 because this dataset is created using circular gaussian distribution. 
-So the covariance matrix is diagonal and the decision boundary is linear.
+
 \section{Comparison}
 \subsection{Tuning of hyperparameters}
 	To tune our classifiers hyperparameters, we can use the cross-validation method.

@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1666554790 "c:/Users/lambe/OneDrive/Documents/Inge_master_1/Machine_learning/IML_01/report/report.tex" "report.pdf" "report" 1666554792
-  "c:/Users/lambe/OneDrive/Documents/Inge_master_1/Machine_learning/IML_01/report/report.tex" 1666554787 11411 558697ba750cfc5f55d081332e77af26 ""
+["pdflatex"] 1666555114 "c:/Users/lambe/OneDrive/Documents/Inge_master_1/Machine_learning/IML_01/report/report.tex" "report.pdf" "report" 1666555116
+  "c:/Users/lambe/OneDrive/Documents/Inge_master_1/Machine_learning/IML_01/report/report.tex" 1666555113 11413 328eb9104c1f5bffa64380a0815e9861 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1652171274 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1652172745 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1652172481 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -121,8 +121,8 @@
   "img/knn_625.pdf" 1666544188 47275 41f31e0bfb1fb74cec63e148aecf4f55 ""
   "img/lda2.pdf" 1666544292 51803 54ee68366cf1c5ed2a356fe25bcb30bc ""
   "img/qda2.pdf" 1666544291 56057 c0dd75f814af1fe584725c41f5f2094d ""
-  "report.aux" 1666554792 3113 e113aa7f6433b217ad924f3f07b71dc7 "pdflatex"
-  "report.tex" 1666554787 11411 558697ba750cfc5f55d081332e77af26 ""
+  "report.aux" 1666555116 3113 46721f3b01e865d768461d0baddebaaa "pdflatex"
+  "report.tex" 1666555113 11413 328eb9104c1f5bffa64380a0815e9861 ""
   (generated)
   "report.aux"
   "report.log"
