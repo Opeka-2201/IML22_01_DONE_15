@@ -12,6 +12,7 @@ from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.metrics import accuracy_score
 from data import make_dataset1, make_dataset2
 from plot import plot_boundary
+from os import system
 
 class QuadraticDiscriminantAnalysis(BaseEstimator, ClassifierMixin):
     def __init__(self):
