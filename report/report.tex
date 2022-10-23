@@ -13,6 +13,7 @@
 \usepackage{xurl}
 \usepackage{caption}
 \usepackage{geometry}
+\usepackage{float}
 \usepackage[shortlabels]{enumitem}
 \geometry{hmargin = 2.5cm, vmargin = 2.5cm}
 
@@ -98,7 +99,7 @@
 		\end{table}
 
 	\newpage
-	\begin{figure}[htp]
+	\begin{figure}[H]
 	\centering
 	\includegraphics[width=.3\textwidth]{img/dt_1.pdf}\quad
 	\includegraphics[width=.3\textwidth]{img/dt_2.pdf}\quad
@@ -116,48 +117,50 @@
 \newpage
 \section{K-nearest neighbors}
 	\subsection{Impact of the number of neighbors on the decision boundary}
- 		The different boundaries are represented in figure 2. The lower the number of neighbors, the more the decision boundary is affected by the noise in the data (it starts to overfit). 
+	\begin{enumerate}[a)]
+		\item This is the graphics with the 6 parameters.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.3\textwidth]{img/knn_1.pdf}\quad
+			\includegraphics[width=.3\textwidth]{img/knn_5.pdf}\quad
+			\includegraphics[width=.3\textwidth]{img/knn_25.pdf}\quad
+			
+			\medskip
+			
+			\includegraphics[width=.3\textwidth]{img/knn_125.pdf}\quad
+			\includegraphics[width=.3\textwidth]{img/knn_625.pdf}\quad
+			\includegraphics[width=.3\textwidth]{img/knn_1200.pdf}\quad
+			
+			\caption{K-nearest neighbors with different n\_neighbors values}
+			\label{fig:knn}
+		\end{figure}
+		\item 
+		The different boundaries are represented in figure 2. The lower the number of neighbors, the more the decision boundary is affected by the noise in the data (it starts to overfit). 
 		When the number of neighbors increases, e.g for 5, 25 and 125, there's less overfitting and the decision boundary is more stable.
 		When the number of neighbors gets even greater, e.g 625, the model starts to underfit the data, as it is not complex enough to fit the data.
 		And in the worst case, when the number of neighbors is equal to the number of samples, the model simply makes the same prediction for every sample, which is the mean of the training set, giving the worst accuracy possible.
-
+	\end{enumerate}
 \subsection{Tests accuracy report}
 	\begin{table}[!h]
 		\centering
 		\begin{tabular}{|c|c|c|}
 		\hline
-		\verb|n_neighbors| & Mean & Standard Deviation \\ \hline
+		\verb|n_neighbors|               & Mean & Standard Deviation \\ \hline
 		1                                & 0.78 & 0.024              \\ \hline
 		5                                & 0.81 & 0.013              \\ \hline
-		25                                & 0.84 & 0.013              \\ \hline
-		125                               & 0.85 & 0.021              \\ \hline
-		625                             & 0.81 & 0.010               \\ \hline
-		1200                             & 0.48 & 0.014               \\ \hline
+		25                               & 0.84 & 0.013              \\ \hline
+		125                              & 0.85 & 0.021              \\ \hline
+		625                              & 0.81 & 0.010              \\ \hline
+		1200                             & 0.48 & 0.014              \\ \hline
 
 		\end{tabular}
 		\caption{Decision trees results}
 		\label{tab:results-knn}
 	\end{table}
-Reporting to the table, we can see that the best number of neighbors is 25. 
+Reporting to the table, we can see that the best number of neighbors is 125. 
 Indeed, it gives good accuracy while keeping the standard deviation low. 
 When the number of neighbors is too low, the model overfits the data and when it is too high, the model underfits the data.
 
-\newpage
-\begin{figure}[htp]
-	\centering
-	\includegraphics[width=.3\textwidth]{img/knn_1.pdf}\quad
-	\includegraphics[width=.3\textwidth]{img/knn_5.pdf}\quad
-	\includegraphics[width=.3\textwidth]{img/knn_25.pdf}\quad
-	
-	\medskip
-	
-	\includegraphics[width=.3\textwidth]{img/knn_125.pdf}\quad
-	\includegraphics[width=.3\textwidth]{img/knn_625.pdf}\quad
-	\includegraphics[width=.3\textwidth]{img/knn_1200.pdf}\quad
-	
-	\caption{K-nearest neighbors with different n\_neighbors values}
-	\label{fig:knn}
-\end{figure}
 
 \section{Quadratic/Linear discriminant analysis}
 \subsection{Decision boundaries}
@@ -173,8 +176,17 @@ With :
 Dividing both sides by $P(y=1|x)$ and taking the logarithm, we get the following equation :
 \begin{align}
 	\log\frac{P(y=0|x)}{P(y=1|x)} = \log\frac{f_0(x)\pi_0}{f_1(x)\pi_1 }&=0\\
-	\log\frac{f_0(x)}{f_1(x)} + \log\frac{\pi_0}{\pi_1}&= 0\\
-	-\frac{1}{2}(\mu_0+\mu_1)^T\Sigma^{-1}(\mu_0-\mu_1) + x^T\Sigma^{-1}(\mu_0+\mu_1)+  \log\frac{\pi_0}{\pi_1} &= 0
+	\log\frac{f_0(x)}{f_1(x)} + \log\frac{\pi_0}{\pi_1}&= 0
+\end{align}
+The first term of the line 6 change between the Linear and Quadratic form. In the linear case, we have $|\Sigma_0|=|\Sigma_1|$ so in the division, we can simplify the 2 discriminant
+and the quadratic form desappears. In the quadratic case, we have $|\Sigma_0|\neq|\Sigma_1|$ so we have to keep the quadratic form.\\
+Linear case : 
+\begin{align}
+	\log\frac{\pi_0}{\pi_1} - \frac{1}{2}(\mu_0+\mu_1)^T\Sigma^{-1}(\mu_0-\mu_1) + x^T\Sigma^{-1}(\mu_0-\mu_1) = 0
+\end{align}
+Quadratic case : 
+\begin{align}
+	\log\frac{\pi_0}{\pi_1} - \frac{1}{2}(\mu_0+\mu_1)^T\Sigma^{-1}(\mu_0-\mu_1) + x^T\Sigma^{-1}(\mu_0-\mu_1) + \log\frac{|\Sigma_1|}{|\Sigma_0|} = 0
 \end{align}
 \subsection{}
 \subsubsection[]{Quadratic/Linear discriminant analysis}
@@ -189,28 +201,46 @@ It is also the reason why the curve of iso probbility is parallel line in LDA. W
 	\caption{Quadratic/Linear discriminant analysis}
 	\label{fig:qdalda}
 \end{figure}
-\subsubsection[]{Tests accuracy report}
+\subsubsection{Tests accuracy report}
 	\begin{table}[!h]
 		\centering
 		\begin{tabular}{|c|c|c|}
 		\hline
-		\verb|LDA QDA| & Mean & Standard Deviation \\ \hline
+		\verb|LDA QDA|                      & Mean & Standard Deviation \\ \hline
 		LDA1                                & 0.85 & 0.068              \\ \hline
 		QDA1                                & 0.86 & 0.057              \\ \hline
 		LDA2                                & 0.72 & 0.053              \\ \hline
 		QDA2                                & 0.76 & 0.062              \\ \hline
-
-
 		\end{tabular}
 		\caption{Decision trees results}
 		\label{tab:results-qdalda}
 	\end{table}
-We can see that QDA is better than LDA in general. But the results are really close for dataset 1 because this dataset is create thanks to a circular gaussian distribution. 
-So the matrix of covariance is diagonal and the decision boundary is linear.
+
+We can see that QDA is better than LDA in general. But the results are really close for dataset 1 because this dataset is created using circular gaussian distribution. 
+So the covariance matrix is diagonal and the decision boundary is linear.
 \section{Comparison}
-\subsection[]{Tune hyperparameters}
-To find the best hyperparameters, we tried different values for the hyperparameters and we kept the best ones.
-The best hyperparameters are the ones that give the best accuracy while keeping the standard deviation low and have a good time of execution so the lower depth in decision trees and the less neighbors in KNN.
-To sum up, to find the best hyperparameters, we look at 3 criterias : accuracy, standard deviation and time of execution.
+\subsection{Tuning of hyperparameters}
+	To tune our classifiers hyperparameters, we can use the cross-validation method.
+	This method consists in splitting the dataset into $k$ folds.
+	Then, we train the model on $k-1$ folds and test it on the remaining fold.
+	We repeat this process $k$ times, each time using a different fold as the test set.
+	Finally, we average the results to get the final accuracy. We used different values of the hyperparameters and we chose the one that gave the best accuracy.
+	We implement this method in the \verb|tune.py| file using
+	the \verb|GridSearchCV| class from the \verb|sklearn.model_selection| module. We used the 5-fold cross-validation method and the accuracy as the scoring parameter.
+\subsection{Results of our implementation} 
+	After finding the best hyperparameters, we trained the model using it and we tested it on 5 iterations of the dataset. Here are the results we obtained :
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{|c|c|c|}
+		\hline
+													 						& Mean & Standard Deviation \\ \hline
+		KNN\_tuned (neighbors = 125)       & 0.86 & 0.02              \\ \hline
+		DT\_tuned (depth = 4)              & 0.84 & 0.021              \\ \hline
+		\end{tabular}
+		\caption{Tuned hyperparameters results}
+		\label{tab:results-tune}	
+	\end{table}
+
+\subsection{Comparison with the QDA/LDA results}
 
 \end{document}

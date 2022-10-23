@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.10)  23 OCT 2022 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.10)  23 OCT 2022 21:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -240,58 +240,65 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen183
 \Gm@layoutvoffset=\dimen184
 \Gm@dimlist=\toks28
+) (c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count292
+\float@exts=\toks29
+\float@box=\box53
+\@float@everytoks=\toks30
+\@floatcapt=\box54
 ) (c:/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip58
 \enit@outerparindent=\dimen185
-\enit@toks=\toks29
-\enit@inbox=\box53
-\enit@count@id=\count292
-\enitdp@description=\count293
+\enit@toks=\toks31
+\enit@inbox=\box55
+\enit@count@id=\count293
+\enitdp@description=\count294
 ) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count294
-\l__pdf_internal_box=\box54
+\l__color_backend_stack_int=\count295
+\l__pdf_internal_box=\box56
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Info: Redefining \degres on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Info: Redefining \degres on input line 29.
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 28.
+(french.ldf)             reported on input line 29.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 28.
-LaTeX Info: Redefining \up on input line 28.
+(french.ldf)             reported on input line 29.
+LaTeX Info: Redefining \up on input line 29.
  (c:/texlive/2022/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 ) (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count295
+\scratchcounter=\count296
 \scratchdimen=\dimen186
-\scratchbox=\box55
-\nofMPsegments=\count296
-\nofMParguments=\count297
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count298
+\scratchbox=\box57
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count299
 \MPscratchDim=\dimen187
-\MPnumerator=\count299
-\makeMPintoPDFobject=\count300
-\everyMPtoPDFconversion=\toks31
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks33
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (c:/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
@@ -314,6 +321,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 *geometry* driver: auto-detecting
@@ -353,49 +361,49 @@ Package caption Info: End \AtBeginDocument code.
 <img/University.png, id=1, 341.275pt x 148.555pt>
 File: img/University.png Graphic file (type png)
 <use img/University.png>
-Package pdftex.def Info: img/University.png  used on input line 33.
+Package pdftex.def Info: img/University.png  used on input line 34.
 (pdftex.def)             Requested size: 238.89085pt x 103.98778pt.
 (c:/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/University.png>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 75.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 76.
  (c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1]
 <img/dt_1.pdf, id=21, 462.52798pt x 346.89601pt>
 File: img/dt_1.pdf Graphic file (type pdf)
 <use img/dt_1.pdf>
-Package pdftex.def Info: img/dt_1.pdf  used on input line 103.
+Package pdftex.def Info: img/dt_1.pdf  used on input line 104.
 (pdftex.def)             Requested size: 141.61081pt x 106.20805pt.
 <img/dt_2.pdf, id=22, 462.52798pt x 346.89601pt>
 File: img/dt_2.pdf Graphic file (type pdf)
 <use img/dt_2.pdf>
-Package pdftex.def Info: img/dt_2.pdf  used on input line 104.
+Package pdftex.def Info: img/dt_2.pdf  used on input line 105.
 (pdftex.def)             Requested size: 141.61081pt x 106.20805pt.
 <img/dt_4.pdf, id=23, 462.52798pt x 346.89601pt>
 File: img/dt_4.pdf Graphic file (type pdf)
 <use img/dt_4.pdf>
-Package pdftex.def Info: img/dt_4.pdf  used on input line 105.
+Package pdftex.def Info: img/dt_4.pdf  used on input line 106.
 (pdftex.def)             Requested size: 141.61081pt x 106.20805pt.
 <img/dt_8.pdf, id=24, 462.52798pt x 346.89601pt>
 File: img/dt_8.pdf Graphic file (type pdf)
 <use img/dt_8.pdf>
-Package pdftex.def Info: img/dt_8.pdf  used on input line 109.
+Package pdftex.def Info: img/dt_8.pdf  used on input line 110.
 (pdftex.def)             Requested size: 141.61081pt x 106.20805pt.
 <img/dt_None.pdf, id=25, 462.52798pt x 346.89601pt>
 File: img/dt_None.pdf Graphic file (type pdf)
 <use img/dt_None.pdf>
-Package pdftex.def Info: img/dt_None.pdf  used on input line 110.
+Package pdftex.def Info: img/dt_None.pdf  used on input line 111.
 (pdftex.def)             Requested size: 141.61081pt x 106.20805pt.
  [2 <./img/dt_1.pdf> <./img/dt_2.pdf
 
@@ -409,38 +417,38 @@ pdfTeX warning: pdflatex.exe (file ./img/dt_8.pdf): PDF inclusion: multiple pdfs
 > <./img/dt_None.pdf
 
 pdfTeX warning: pdflatex.exe (file ./img/dt_None.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [3]
-<img/knn_1.pdf, id=205, 462.52798pt x 346.89601pt>
+>]
+<img/knn_1.pdf, id=202, 462.52798pt x 346.89601pt>
 File: img/knn_1.pdf Graphic file (type pdf)
 <use img/knn_1.pdf>
-Package pdftex.def Info: img/knn_1.pdf  used on input line 148.
+Package pdftex.def Info: img/knn_1.pdf  used on input line 124.
 (pdftex.def)             Requested size: 141.61081pt x 106.20805pt.
-<img/knn_5.pdf, id=206, 462.52798pt x 346.89601pt>
+<img/knn_5.pdf, id=203, 462.52798pt x 346.89601pt>
 File: img/knn_5.pdf Graphic file (type pdf)
 <use img/knn_5.pdf>
-Package pdftex.def Info: img/knn_5.pdf  used on input line 149.
+Package pdftex.def Info: img/knn_5.pdf  used on input line 125.
 (pdftex.def)             Requested size: 141.61081pt x 106.20805pt.
-<img/knn_25.pdf, id=207, 462.52798pt x 346.89601pt>
+<img/knn_25.pdf, id=204, 462.52798pt x 346.89601pt>
 File: img/knn_25.pdf Graphic file (type pdf)
 <use img/knn_25.pdf>
-Package pdftex.def Info: img/knn_25.pdf  used on input line 150.
+Package pdftex.def Info: img/knn_25.pdf  used on input line 126.
 (pdftex.def)             Requested size: 141.61081pt x 106.20805pt.
-<img/knn_125.pdf, id=208, 462.52798pt x 346.89601pt>
+<img/knn_125.pdf, id=205, 462.52798pt x 346.89601pt>
 File: img/knn_125.pdf Graphic file (type pdf)
 <use img/knn_125.pdf>
-Package pdftex.def Info: img/knn_125.pdf  used on input line 154.
+Package pdftex.def Info: img/knn_125.pdf  used on input line 130.
 (pdftex.def)             Requested size: 141.61081pt x 106.20805pt.
-<img/knn_625.pdf, id=209, 462.52798pt x 346.89601pt>
+<img/knn_625.pdf, id=206, 462.52798pt x 346.89601pt>
 File: img/knn_625.pdf Graphic file (type pdf)
 <use img/knn_625.pdf>
-Package pdftex.def Info: img/knn_625.pdf  used on input line 155.
+Package pdftex.def Info: img/knn_625.pdf  used on input line 131.
 (pdftex.def)             Requested size: 141.61081pt x 106.20805pt.
-<img/knn_1200.pdf, id=210, 462.52798pt x 346.89601pt>
+<img/knn_1200.pdf, id=207, 462.52798pt x 346.89601pt>
 File: img/knn_1200.pdf Graphic file (type pdf)
 <use img/knn_1200.pdf>
-Package pdftex.def Info: img/knn_1200.pdf  used on input line 156.
+Package pdftex.def Info: img/knn_1200.pdf  used on input line 132.
 (pdftex.def)             Requested size: 141.61081pt x 106.20805pt.
- [4 <./img/knn_1.pdf> <./img/knn_5.pdf
+ [3 <./img/knn_1.pdf> <./img/knn_5.pdf
 
 pdfTeX warning: pdflatex.exe (file ./img/knn_5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./img/knn_25.pdf
@@ -456,33 +464,41 @@ pdfTeX warning: pdflatex.exe (file ./img/knn_625.pdf): PDF inclusion: multiple p
 
 pdfTeX warning: pdflatex.exe (file ./img/knn_1200.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<img/lda2.pdf, id=421, 462.52798pt x 346.89601pt>
+<img/lda2.pdf, id=411, 462.52798pt x 346.89601pt>
 File: img/lda2.pdf Graphic file (type pdf)
 <use img/lda2.pdf>
-Package pdftex.def Info: img/lda2.pdf  used on input line 186.
+Package pdftex.def Info: img/lda2.pdf  used on input line 198.
 (pdftex.def)             Requested size: 188.8096pt x 141.60898pt.
-<img/qda2.pdf, id=422, 462.52798pt x 346.89601pt>
+<img/qda2.pdf, id=412, 462.52798pt x 346.89601pt>
 File: img/qda2.pdf Graphic file (type pdf)
 <use img/qda2.pdf>
-Package pdftex.def Info: img/qda2.pdf  used on input line 187.
+Package pdftex.def Info: img/qda2.pdf  used on input line 199.
 (pdftex.def)             Requested size: 188.8096pt x 141.60898pt.
- [5 <./img/lda2.pdf> <./img/qda2.pdf
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <./img/lda2.pdf> <./img/qda2.pdf
 
 pdfTeX warning: pdflatex.exe (file ./img/qda2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (./report.aux) ) 
+>] [6] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 9523 strings out of 478300
- 154389 string characters out of 5849123
- 471255 words of memory out of 5000000
- 27554 multiletter control sequences out of 15000+600000
+ 9588 strings out of 478300
+ 155483 string characters out of 5849123
+ 477648 words of memory out of 5000000
+ 27615 multiletter control sequences out of 15000+600000
  483104 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,9n,67p,598b,600s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on report.pdf (6 pages, 925080 bytes).
+Output written on report.pdf (7 pages, 930822 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
+ 569 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

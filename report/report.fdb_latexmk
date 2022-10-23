@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1666545275 "c:/Users/lambe/OneDrive/Documents/Inge_master_1/Machine_learning/IML_01/report/report.tex" "report.pdf" "report" 1666545276
-  "c:/Users/lambe/OneDrive/Documents/Inge_master_1/Machine_learning/IML_01/report/report.tex" 1666545274 9830 5b31427e3c1f3c37f410ac705cd31fc3 ""
+["pdflatex"] 1666554591 "c:/Users/lambe/OneDrive/Documents/Inge_master_1/Machine_learning/IML_01/report/report.tex" "report.pdf" "report" 1666554594
+  "c:/Users/lambe/OneDrive/Documents/Inge_master_1/Machine_learning/IML_01/report/report.tex" 1666554588 11434 453b197e8a96034faa4306de18bccc20 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1652171274 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1652172745 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1652172481 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -81,6 +81,7 @@
   "c:/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty" 1652172538 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1652172551 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "c:/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1652172585 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "c:/texlive/2022/texmf-dist/tex/latex/float/float.sty" 1652172721 6749 16d2656a1984957e674b149555f1ea1d ""
   "c:/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty" 1652172825 41601 9cf6c5257b1bc7af01a58859749dd37a ""
   "c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1652172894 1224 978390e9c2234eab29404bc21b268d1e ""
   "c:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def" 1652172894 19103 48d29b6e2a64cb717117ef65f107b404 ""
@@ -122,8 +123,8 @@
   "img/knn_625.pdf" 1666544188 47275 41f31e0bfb1fb74cec63e148aecf4f55 ""
   "img/lda2.pdf" 1666544292 51803 54ee68366cf1c5ed2a356fe25bcb30bc ""
   "img/qda2.pdf" 1666544291 56057 c0dd75f814af1fe584725c41f5f2094d ""
-  "report.aux" 1666545276 2746 feab89535da90390b307405fe2a7f0bc "pdflatex"
-  "report.tex" 1666545274 9830 5b31427e3c1f3c37f410ac705cd31fc3 ""
+  "report.aux" 1666554594 3216 db5ee050090eb8511a3712fe4b0bbc44 "pdflatex"
+  "report.tex" 1666554588 11434 453b197e8a96034faa4306de18bccc20 ""
   (generated)
   "report.aux"
   "report.log"
